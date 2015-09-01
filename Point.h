@@ -1,6 +1,4 @@
-//
-// Created by Travis Milton on 8/31/15.
-//
+//created by Travis Milton 9/1/2015
 // A 3-dimensional point class!
 // Coordinates are double-precision floating point.
 
@@ -10,13 +8,13 @@
 class Point {
 
 private:
-    double x; // first dimension
-    double y; // second dimension
-    double z; // third dimension
+    double x;                               // first dimension
+    double y;                               // second dimension
+    double z;                               // third dimension
 
 public:
     // Constructors
-    Point();                      // default constructor
+    Point();                                // default constructor
     Point(double x, double y, double z);    // three-argument constructor
 
     // Destructor
@@ -28,12 +26,12 @@ public:
     void setZ(double newZ);
 
     // Accessor methods
-    double getX();
-    double getY();
-    double getZ();
+    double getX() const;
+    double getY() const;
+    double getZ() const;
 
     // Member function
-    double distanceTo(Point& a, Point& b);
+    double distanceTo(const Point& a);   // distance call prototype
 };
 
 #endif // __point_h
