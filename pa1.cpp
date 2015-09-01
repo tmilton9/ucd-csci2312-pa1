@@ -33,7 +33,7 @@ int main(void) {
     cout << "z: ";
     cin >> z;
     Point c(x,y,z);
-    cout << setprecision(2) << endl;
+
     cout << "The area between the three points is " << computeArea(a,b,c);
 
     return 0;
