@@ -1,6 +1,5 @@
-//
-// Created by Travis Milton on 8/31/15.
-//
+// created by Travis milton 9/1/2015
+
 
 #include "Point.h"
 #include <cmath>
@@ -44,21 +43,24 @@ void Point::setZ(double newZ) {
 // Accessors
 // Return the current values of private member variables
 
-double Point::getX() {
+double Point::getX() const {
     return x;
 }
 
-double Point::getY() {
+double Point::getY() const {
     return y;
 }
 
-double Point::getZ() {
+double Point::getZ() const {
     return z;
 }
 
 //Member function
-double Point::distanceTo(Point& a, Point& b) {
+double Point::distanceTo(const Point& a)  //this function returns the distance between two sides
+{
 
-    return sqrt(pow(b.getX()-a.getX(),2) + pow(b.getY()-a.getY(),2) + pow(b.getZ()-a.getZ(),2));
+    return sqrt(pow(x-a.getX(),2) + pow(y-a.getY(),2) + pow(z-a.getZ(),2));
+
 
 }
+
